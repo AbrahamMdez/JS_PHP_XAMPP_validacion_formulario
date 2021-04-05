@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Superformulario</h1>
+        </header>
+
+        <main>
+            <form id="form">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Nombre..." required>
+
+                <label for="surname">Apellidos</label>
+                <input type="text" name="surname" id="surname" placeholder="Apellidos..." required>
+
+                <label for="age">Edad</label>
+                <input type="text" name="age" id="age" placeholder="Edad..." required>
+
+                <fieldset>
+                    <legend>Genero</legend>
+                    <label for="gender">Hombre</label>
+                    <input type="radio" name="gender" id="gender" value="Hombre" required>
+                    
+                    <label for="gender">Mujer</label>
+                    <input type="radio" name="gender" value="Mujer" required>
+
+                    <label for="gender">Otro</label>
+                    <input type="radio" name="gender" value="Otro" required>
+                </fieldset>
+
+                <label for="id">DNI</label>
+                <input type="text" name="id" id="id" placeholder="DNI..." required>
+
+                <label for="height"></label>
+                <input type="number" name="height" id="height" step="0.01" placeholder="Estatura..." required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email..." required>
+
+                <label for="observer">Observaciones</label>
+                <input type="textarea" name="observer" id="observer" placeholder="Observaciones..." required>
+
+                <label for="newsletter">Publicidad</label>
+                <select id="newsletter">
+                    <option value="SI" name="newsletter" label="SI">
+                    <option value="NO" name="newsletter" label="NO">
+                </select>
+    
+                <input type="submit" value="Enviar">
+            </form>
+
+            <form id="formDate">
+                <fieldset>
+                    <legend>Desde:</legend>
+                    <input type="date" name="date1" id="date1">
+
+                    <legend>Hasta:</legend>
+                    <input type="date" name="date2" id="date2">
+
+                    <input type="submit" value="Total dias">
+                </fieldset>
+            </form>
+        </main>
+    <script src="JS/MyFunction.js"></script>
+    <script src="JS/CalculateDay.js"></script>
+    </body>
+</html>
