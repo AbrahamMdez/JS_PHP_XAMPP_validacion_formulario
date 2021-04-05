@@ -49,7 +49,7 @@
                 <input type="text" name="id" id="id" placeholder="DNI..." required>
 
                 <label for="height"></label>
-                <input type="number" name="height" id="height" placeholder="Estatura..." required>
+                <input type="number" name="height" id="height" step=".01" placeholder="Estatura..." required>
 
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email..." required>
@@ -59,24 +59,13 @@
 
                 <label for="newsletter">Publicidad</label>
                 <select id="newsletter">
+                    <option value="default" name="newsletter" label="Eliga Si o No"></option>
                     <option value="SI" name="newsletter" label="SI">
                     <option value="NO" name="newsletter" label="NO">
                 </select>
     
                 <input type="submit" value="Enviar">
             </form>
-
-            <!-- <form id="formDate">
-                <fieldset>
-                    <legend>Desde:</legend>
-                    <input type="date" name="date1" id="date1">
-
-                    <legend>Hasta:</legend>
-                    <input type="date" name="date2" id="date2">
-
-                    <input type="submit" value="Total dias">
-                </fieldset>
-            </form> -->
         </main>
     <script src="JS/MyFunction.js"></script>
     </body>

@@ -26,8 +26,8 @@ const formIsValid = {
 };
 
 form.addEventListener('submit', e => {
-    validateForm();
     e.preventDefault();
+    validateForm();
 });
 
 //A diferencia de keyup, change nos muestra los cambios en el form siempre, keyup si por ejemplo copias y pegas algo en el input no lo detecta
@@ -64,11 +64,11 @@ date1, date2.addEventListener('change', e => {
 
     let milisegSpendt = Math.abs(date1Formated.getTime() - date2Formated.getTime());
 
-    let daysSpendt = Math.round(milisegSpendt/milisegDay);
+    let totalDays = Math.round(milisegSpendt/milisegDay);
 
     console.log(milisegDay);
     console.log(milisegSpendt);
-    console.log(daysSpendt);
+    console.log(totalDays);
 });
 
 dni.addEventListener('change', e => {
@@ -77,9 +77,9 @@ dni.addEventListener('change', e => {
 
 height.addEventListener('change', e => {
     const heightWithOnlyTwoDecimal = e.target.value;
-    const newNumber = heightWithOnlyTwoDecimal.toFixed();
-    console.log(newNumber);
-    if(newNumber.trim().length > 0) formIsValid.height = true;
+    /* const newNumber = heightWithOnlyTwoDecimal.toFixed(2);
+    console.log(newNumber); */
+    if(heightWithOnlyTwoDecimal.trim().length > 0) formIsValid.height = true;
 });
 
 email.addEventListener('change', e => {
@@ -114,6 +114,7 @@ newsletter.addEventListener('change', e => {
 
 const validateForm = () => {
 
+    console.log(formIsValid);
     const formValues = Object.values(formIsValid);
     const inputValid = formValues.findIndex( value => value == false);
 
@@ -123,10 +124,11 @@ const validateForm = () => {
 
         xhttp.open('POST', 'PHP/controller.php', true);
     
-        xhttp.send(); 
-
         const newFormData = new FormData(form);
         console.log(newFormData);
+
+        xhttp.send(newFormData); 
+
     }else {
         alert('Formulario invalido');
     } 
