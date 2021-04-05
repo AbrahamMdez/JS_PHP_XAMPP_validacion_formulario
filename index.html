@@ -35,11 +35,21 @@
                     <input type="radio" name="gender" value="Otro" required>
                 </fieldset>
 
+                <fieldset>
+                    <legend>Desde:</legend>
+                    <label for="date1"></label>
+                    <input type="date" name="date1" id="date1">
+
+                    <legend>Hasta:</legend>
+                    <label for="date2"></label>
+                    <input type="date" name="date2" id="date2">
+                </fieldset>
+
                 <label for="id">DNI</label>
                 <input type="text" name="id" id="id" placeholder="DNI..." required>
 
                 <label for="height"></label>
-                <input type="number" name="height" id="height" step="0.01" placeholder="Estatura..." required>
+                <input type="number" name="height" id="height" placeholder="Estatura..." required>
 
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email..." required>
@@ -56,7 +66,7 @@
                 <input type="submit" value="Enviar">
             </form>
 
-            <form id="formDate">
+            <!-- <form id="formDate">
                 <fieldset>
                     <legend>Desde:</legend>
                     <input type="date" name="date1" id="date1">
@@ -66,9 +76,8 @@
 
                     <input type="submit" value="Total dias">
                 </fieldset>
-            </form>
+            </form> -->
         </main>
     <script src="JS/MyFunction.js"></script>
-    <script src="JS/CalculateDay.js"></script>
     </body>
 </html>
