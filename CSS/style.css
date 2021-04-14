@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #ffffb3;
+    --font-family: font-family: 'Raleway', sans-serif;
+    --text-color: #caae53; 
+}
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--primary-color);
+    height: 100vh;
+    width: 100vw;
+}
+
+body header {
+    height: 10vh;
+    width: 100vw;
+    padding: 2vh;
+    text-align: center;
+}
+
+body main {
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+body main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body main form input {
+    width: 35vw;
+    padding: 2vh 1vw 1vh 1vw;
+    border: none;
+    border-bottom: 2px solid grey;
+    background: none;
+}
+
+body main form input:focus,
+body main form input:focus {
+    outline: none;
+}
+
+body main form legend {
+    padding: 0.5vh;
+}
+
+body main form fieldset:nth-child(7) {
+    width: 35vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+body main form fieldset:nth-child(7) input {
+    width: 2vw;
+}
+
+body main form fieldset:nth-child(7) label {
+    display: block;
+}
+
+body main form fieldset:nth-child(8) {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body main form fieldset:nth-child(8) input {
+    width: 14vw;
+}
+
+body main form label:nth-child(17) {
+    margin-top: 1vh;
+    display: block;
+}
+
+body main form select {
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    width: 28vw;
+    background: none;
+}
+
+body main form select option {
+    width: 15vw;
+}
+
+body main form label {
+    display: none;
+}
+
+body main form input:nth-child(19) {
+    padding: 2vh;
+    border: none;
+    background-color: #43a047;
+    margin-top: 4vh;
+    color: white;
+    font-size: 1rem;
+}
